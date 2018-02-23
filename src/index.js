@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import NestedDataApp from './NestedDataApp';
 
 ReactDOM.render(
-  <App cat={5} />,
+  <NestedDataApp />,
   document.getElementById('root')
 );
