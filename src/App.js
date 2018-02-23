@@ -24,14 +24,17 @@ class App extends React.Component {
         <h1>Hallo</h1>
         <b>{txt}</b> <i>Category: {cat}</i>
         <br />
-        <input type="text" onChange={this.update.bind(this)} />
-        <br />        
+        <Input update = {this.update.bind(this)} />
+        <br />
         <b>{this.state.txt}</b> <i>Category: {this.state.cat}</i>
 
       </div>
     )
   }
 }
+
+const Input = (props) =>
+  <input type="text" onChange={props.update} />
 
 App.propTypes = {
   txt: PropTypes.string,
