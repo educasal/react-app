@@ -47,17 +47,35 @@ class Button extends React.Component {
     console.log('componentWillUnmount')
   }
 
+  componentWillReceiveProps(nextProps) {
+    console.log('componentWillReceiveProps');
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('shouldComponentUpdate');
+    return nextProps.value % 3 === 0;
+  }
+
+  componentDidUpdate(prevProps, preveState) {
+    console.log('componentDidUpdate');
+  }
+
   update(e) {
-    this.setState({ value: this.state.value + 1 })
+    // this.setState({ value: this.state.value + 1 })
+    ReactDOM.render(
+      <Button value={this.props.value + 1} />,
+      document.getElementById('a')
+    );
   }
 
   render() {
     console.log('render')
     return (
-      <button onClick={this.update}>{this.state.value}</button>
+      <button onClick={this.update}>{this.props.value}</button>
     )
   }
 }
 
+Button.defaultProps = {value: 0}
 
 export default LifecycleApp;
