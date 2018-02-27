@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import LifecycleApp from './LifecycleApp';
+import FetchApp from './FetchApp';
 
 ReactDOM.render(
-  <LifecycleApp />,
+  <FetchApp />,
   document.getElementById('root')
 );
