@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import NestedDataApp from './NestedDataApp';
-import EventsApp from './EventsApp';
+import LifecycleApp from './LifecycleApp';
 
 ReactDOM.render(
-  <EventsApp />,
+  <LifecycleApp />,
   document.getElementById('root')
 );
